@@ -1,17 +1,47 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Documento</title>
+
+    <!-- Arquivos CSS -->
     <link rel="stylesheet" href="estilos/normalize.css">
-    <link rel="stylesheet" href="estilos/estilos.css">
+    <link rel="stylesheet" href="estilos/telas-pequenas.css">
+    <link rel="stylesheet" href="estilos/telas-grandes.css">
 </head>
 
 <body>
-    <p>Olá, mundo!</p>
-    <h1>Bem-vindo ao Meu Site</h1>
-</body>
+
+    <header>
+        <img src="imagens/casa.svg" alt="Logo do Site" width="512" height="512">
+        <span>Site do Fabio</span>
+        <button id="ham-btn" class="hamburger" type="button" aria-label="Abrir menu" title="Abrir menu"></button>
+    </header>
+
+    <nav id="nav-bar" class="navegacao">
+        <ul>
+            <li class="atual"><a href="#">Noticias & Eventos</a></li>
+            <li><a class="atual" href="#">Templos Dedicados</a></li>
+            <li><a href="#">Templos Anunciados</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h1>Templos Dedicados</h1>
+    </main>
+    <footer>
+        <div class="social">
+            <a href="https://github.com" target="_blank" rel="noopener"><img src="imagens/github.svg" alt="GitHub"></a>
+            <a href="https://www.linkedin.com" target="_blank" rel="noopener"><img src="imagens/linkedin.svg" alt="LinkedIn"></a>
+            <a href="https://www.facebook.com" target="_blank" rel="noopener"><img src="imagens/facebook.svg" alt="Facebook"></a>
+            <a href="https://x.com" target="_blank" rel="noopener"><img src="imagens/twitter-x.svg" alt="Twitter X"></a>
+        </div>
+        <p>Simbolo de Direitos Autorais e ano atual</p>
+        <p>Ultima Alteracao</p>
+    </footer>
+    <script src="scripts/navegacao.js"></script>
+
+ </body>
 
 </html>
