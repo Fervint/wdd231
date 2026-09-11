@@ -2,12 +2,12 @@
 // O script renderiza a lista, aplica filtros e calcula o total de créditos.
 
 const cursos = [
-    { nome: 'WDD 130', tipo: 'WDD', creditos: 3, status: 'Concluído' },
-    { nome: 'WDD 131', tipo: 'WDD', creditos: 3, status: 'Em andamento' },
-    { nome: 'WDD 230', tipo: 'WDD', creditos: 3, status: 'Concluído' },
-    { nome: 'CSE 121', tipo: 'CSE', creditos: 2, status: 'Concluído' },
-    { nome: 'CSE 122', tipo: 'CSE', creditos: 2, status: 'Em andamento' },
-    { nome: 'CSE 220', tipo: 'CSE', creditos: 3, status: 'Em andamento' }
+    { codigo: 'CSE110', tipo: 'CSE', creditos: 2, status: 'Concluído' },
+    { codigo: 'WDD130', tipo: 'WDD', creditos: 2, status: 'Concluído' },
+    { codigo: 'CSE111', tipo: 'CSE', creditos: 2, status: 'Concluído' },
+    { codigo: 'CSE210', tipo: 'CSE', creditos: 2, status: 'Em andamento' },
+    { codigo: 'WDD131', tipo: 'WDD', creditos: 2, status: 'Em andamento' },
+    { codigo: 'WDD231', tipo: 'WDD', creditos: 2, status: 'Em andamento' }
 ];
 
 const filtroPadrao = 'Todos';
@@ -30,7 +30,7 @@ function criarListaCursos(lista, container) {
         li.className = curso.status === 'Concluído' ? 'curso concluido' : 'curso';
 
         const titulo = document.createElement('span');
-        titulo.textContent = `${curso.nome} (${curso.tipo})`;
+        titulo.textContent = `${curso.codigo} (${curso.tipo})`;
 
         const status = document.createElement('span');
         status.className = 'status';
