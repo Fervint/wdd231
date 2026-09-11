@@ -80,6 +80,7 @@ function montarFiltros() {
         botao.type = 'button';
         botao.textContent = opcao;
         botao.dataset.filtro = opcao;
+        botao.setAttribute('aria-pressed', String(opcao === filtroPadrao));
 
         if (opcao === filtroPadrao) {
             botao.classList.add('ativo');
@@ -88,6 +89,7 @@ function montarFiltros() {
         botao.addEventListener('click', () => {
             document.querySelectorAll('#filtros-cursos button').forEach((item) => {
                 item.classList.toggle('ativo', item === botao);
+                item.setAttribute('aria-pressed', String(item === botao));
             });
             renderizarCursos(opcao);
         });
@@ -113,6 +115,7 @@ function criarPainelCursos() {
     const resumo = document.createElement('p');
     resumo.id = 'resumo-cursos';
     resumo.className = 'resumo-cursos';
+    resumo.setAttribute('aria-live', 'polite');
 
     const lista = document.createElement('div');
     lista.id = 'lista-cursos';
