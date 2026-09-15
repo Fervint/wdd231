@@ -6,3 +6,35 @@ body {
 h1 {
     color: #333;
 }
+#secao-cursos {
+    margin-top: 2rem;
+    padding: 1rem;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+#filtros-cursos {
+    margin-bottom: 1rem;
+}
+
+#filtros-cursos button {
+    margin: 0.4rem;
+    padding: 0.6rem 1.2rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #004080;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#filtros-cursos button:hover {
+    background-color: #0066cc;
+}
+
+#lista-cursos {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}

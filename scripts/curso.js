@@ -1,169 +1,101 @@
-// Array de cursos do programa.
-// O script renderiza a lista, aplica filtros e calcula o total de créditos.
-
-const cursos = [
+document.addEventListener("DOMContentLoaded", () => {
+  const cursos = [
     { codigo: 'CSE110', tipo: 'CSE', creditos: 2, status: 'Concluído' },
     { codigo: 'WDD130', tipo: 'WDD', creditos: 2, status: 'Concluído' },
     { codigo: 'WDD131', tipo: 'WDD', creditos: 2, status: 'Concluído' },
     { codigo: 'CSE111', tipo: 'CSE', creditos: 2, status: 'Concluído' },
     { codigo: 'CSE210', tipo: 'CSE', creditos: 2, status: 'Em andamento' },
     { codigo: 'WDD231', tipo: 'WDD', creditos: 2, status: 'Em andamento' }
-];
+  ];
 
-const filtroPadrao = 'Todos';
+  const filtroPadrao = 'Todos';
 
-function criarListaCursos(lista, container) {
+  function criarListaCursos(lista, container) {
     container.innerHTML = '';
 
     if (!lista.length) {
-        const vazio = document.createElement('p');
-        vazio.textContent = 'Nenhum curso encontrado para este filtro.';
-        container.appendChild(vazio);
-        return;
+      container.innerHTML = '<p>Nenhum curso encontrado para este filtro.</p>';
+      return;
     }
 
     const ul = document.createElement('ul');
     ul.className = 'lista-cursos';
 
     lista.forEach((curso) => {
-        const li = document.createElement('li');
-        li.className = curso.status === 'Concluído' ? 'curso concluido' : 'curso';
+      const li = document.createElement('li');
+      li.className = curso.status === 'Concluído' ? 'curso concluido' : 'curso';
 
-        const titulo = document.createElement('span');
-        titulo.textContent = `${curso.codigo} (${curso.tipo})`;
+      li.innerHTML = `
+        <strong>${curso.codigo}</strong> (${curso.tipo}) - 
+        ${curso.creditos} crédito(s) - <em>${curso.status}</em>
+      `;
 
-        const status = document.createElement('span');
-        status.className = 'status';
-        status.textContent = curso.status;
-
-        const creditos = document.createElement('span');
-        creditos.className = 'creditos';
-        creditos.textContent = `${curso.creditos} crédito(s)`;
-
-        li.addEventListener('click', () => alternarStatus(curso.codigo));
-
-
-        li.appendChild(titulo);
-        li.appendChild(status);
-        li.appendChild(creditos);
-        ul.appendChild(li);
+      li.addEventListener('click', () => alternarStatus(curso.codigo));
+      ul.appendChild(li);
     });
 
     container.appendChild(ul);
-}
+  }
 
-function atualizarResumo(totalCreditos, filtroAtivo) {
+  function atualizarResumo(totalCreditos, filtroAtivo) {
     const resumo = document.getElementById('resumo-cursos');
     if (!resumo) return;
 
     const textoFiltro = filtroAtivo === 'Todos' ? 'todos os cursos' : filtroAtivo;
-    resumo.textContent = `Total de créditos (${textoFiltro}): ${totalCreditos}`;
-}
+    document.getElementById('total-cursos').textContent = `Total de créditos (${textoFiltro}): ${totalCreditos}`;
+  }
 
-function renderizarCursos(filtro = filtroPadrao) {
+  function renderizarCursos(filtro = filtroPadrao) {
     const container = document.getElementById('lista-cursos');
     if (!container) return;
 
     const cursosFiltrados = cursos.filter((curso) => filtro === 'Todos' || curso.tipo === filtro);
-
     criarListaCursos(cursosFiltrados, container);
 
     const totalCreditos = cursosFiltrados.reduce((soma, curso) => soma + curso.creditos, 0);
     atualizarResumo(totalCreditos, filtro);
 
-// 👉 Novo cálculo de progresso:
-const concluidos = cursos.filter(c => c.status === 'Concluído')
-                         .reduce((soma, c) => soma + c.creditos, 0);
-const totalPrograma = cursos.reduce((soma, c) => soma + c.creditos, 0);
-const faltam = totalPrograma - concluidos;
+    const concluidos = cursos.filter(c => c.status === 'Concluído').reduce((soma, c) => soma + c.creditos, 0);
+    const totalPrograma = cursos.reduce((soma, c) => soma + c.creditos, 0);
+    const faltam = totalPrograma - concluidos;
 
-// Atualiza o resumo principal
-atualizarResumo(totalCreditos, filtro);
+    document.getElementById('progresso-cursos').textContent = `Créditos concluídos: ${concluidos} / ${totalPrograma} (faltam ${faltam})`;
+  }
 
-// 👉 Atualiza painel de progresso
-const progresso = document.getElementById('progresso-cursos');
-if (progresso) {
-    progresso.textContent = `Créditos concluídos: ${concluidos} / ${totalPrograma} (faltam ${faltam})`;
-}
+  function alternarStatus(codigo) {
+    const curso = cursos.find((item) => item.codigo === codigo);
+    if (!curso) return;
 
-}
+    curso.status = curso.status === 'Concluído' ? 'Em andamento' : 'Concluído';
+    const filtroAtivo = document.querySelector('.filtro-btn.ativo')?.textContent || filtroPadrao;
+    renderizarCursos(filtroAtivo);
+  }
 
-function montarFiltros() {
+  function montarFiltros() {
     const filtroContainer = document.getElementById('filtros-cursos');
     if (!filtroContainer) return;
 
     const opcoes = ['Todos', 'WDD', 'CSE'];
+    filtroContainer.innerHTML = '';
 
     opcoes.forEach((opcao) => {
-        const botao = document.createElement('button');
-        botao.type = 'button';
-        botao.textContent = opcao;
-        botao.dataset.filtro = opcao;
-        botao.setAttribute('aria-pressed', String(opcao === filtroPadrao));
+      const botao = document.createElement('button');
+      botao.type = 'button';
+      botao.textContent = opcao;
+      botao.className = 'filtro-btn';
 
-        if (opcao === filtroPadrao) {
-            botao.classList.add('ativo');
-        }
+      if (opcao === filtroPadrao) botao.classList.add('ativo');
 
-        botao.addEventListener('click', () => {
-            document.querySelectorAll('#filtros-cursos button').forEach((item) => {
-                item.classList.toggle('ativo', item === botao);
-                item.setAttribute('aria-pressed', String(item === botao));
-            });
-            renderizarCursos(opcao);
-        });
+      botao.addEventListener('click', () => {
+        document.querySelectorAll('.filtro-btn').forEach((btn) => btn.classList.remove('ativo'));
+        botao.classList.add('ativo');
+        renderizarCursos(opcao);
+      });
 
-        filtroContainer.appendChild(botao);
+      filtroContainer.appendChild(botao);
     });
-}
+  }
 
-function criarPainelCursos() {
-    const main = document.querySelector('main');
-    if (!main) return;
-
-    const secaoCursos = document.createElement('section');
-    secaoCursos.className = 'secao-cursos';
-
-    const titulo = document.createElement('h2');
-    titulo.textContent = 'Cursos do Programa';
-
-    const filtros = document.createElement('div');
-    filtros.id = 'filtros-cursos';
-    filtros.className = 'filtros-cursos';
-
-    const resumo = document.createElement('p');
-    resumo.id = 'resumo-cursos';
-    resumo.className = 'resumo-cursos';
-    resumo.setAttribute('aria-live', 'polite');
-
-    const progresso = document.createElement('p');
-progresso.id = 'progresso-cursos';
-progresso.className = 'progresso-cursos';
-progresso.textContent = 'Créditos concluídos: 0 / 0 (faltam 0)';
-secaoCursos.appendChild(progresso);
-
-
-    const lista = document.createElement('div');
-    lista.id = 'lista-cursos';
-    lista.className = 'lista-cursos-container';
-
-    secaoCursos.appendChild(titulo);
-    secaoCursos.appendChild(filtros);
-    secaoCursos.appendChild(resumo);
-    secaoCursos.appendChild(lista);
-    main.appendChild(secaoCursos);
-
-    montarFiltros();
-    renderizarCursos();
-}
-
-criarPainelCursos();
-function alternarStatus(codigo) {
-    const curso = cursos.find(c => c.codigo === codigo);
-    if (!curso) return;
-
-    curso.status = curso.status === 'Concluído' ? 'Em andamento' : 'Concluído';
-    renderizarCursos();
-}
-
-// Exemplo de uso: alternarStatus('CSE210');
+  montarFiltros();
+  renderizarCursos();
+});
