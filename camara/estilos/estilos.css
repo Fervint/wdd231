@@ -29,21 +29,25 @@ nav ul {
     padding: 0;
 }
 
-/* Menu mobile */
-@media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-        gap: 0.5rem;
-        background-color: var(--primaria);
-        padding: 1rem;
-    }
-
-    nav a {
-        display: block;
-        padding: 0.5rem;
-        border-bottom: 1px solid var(--secundaria);
-    }
+/* Links do menu */
+nav a {
+    color: #FFD700;
+    /* dourado */
+    text-decoration: none;
+    font-weight: bold;
 }
+
+/* Mantém dourado mesmo após clicar */
+nav a:visited {
+    color: #FFD700;
+}
+
+/* Opcional: muda ao passar o mouse */
+nav a:hover {
+    color: var(--terciaria);
+    /* ou outro destaque */
+}
+
 
 .hero {
     text-align: center;
