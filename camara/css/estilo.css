@@ -20,16 +20,31 @@ header {
     padding: 1rem;
 }
 
+/* Menu padrão (desktop) */
 nav ul {
     list-style: none;
     display: flex;
     gap: 1rem;
+    margin: 0;
+    padding: 0;
 }
 
-nav a {
-    color: var(--texto);
-    text-decoration: none;
-    font-weight: bold;
+/* Menu mobile */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        /* empilha os itens */
+        gap: 0.5rem;
+        background-color: var(--primaria);
+        padding: 1rem;
+    }
+
+    nav a {
+        display: block;
+        padding: 0.5rem;
+        border-bottom: 1px solid var(--secundaria);
+    }
+
 }
 
 .hero {
