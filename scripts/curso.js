@@ -4,9 +4,9 @@
 const cursos = [
     { codigo: 'CSE110', tipo: 'CSE', creditos: 2, status: 'Concluído' },
     { codigo: 'WDD130', tipo: 'WDD', creditos: 2, status: 'Concluído' },
+    { codigo: 'WDD131', tipo: 'WDD', creditos: 2, status: 'Concluído' },
     { codigo: 'CSE111', tipo: 'CSE', creditos: 2, status: 'Concluído' },
     { codigo: 'CSE210', tipo: 'CSE', creditos: 2, status: 'Em andamento' },
-    { codigo: 'WDD131', tipo: 'WDD', creditos: 2, status: 'Em andamento' },
     { codigo: 'WDD231', tipo: 'WDD', creditos: 2, status: 'Em andamento' }
 ];
 
@@ -40,6 +40,9 @@ function criarListaCursos(lista, container) {
         creditos.className = 'creditos';
         creditos.textContent = `${curso.creditos} crédito(s)`;
 
+        li.addEventListener('click', () => alternarStatus(curso.codigo));
+
+
         li.appendChild(titulo);
         li.appendChild(status);
         li.appendChild(creditos);
@@ -67,6 +70,22 @@ function renderizarCursos(filtro = filtroPadrao) {
 
     const totalCreditos = cursosFiltrados.reduce((soma, curso) => soma + curso.creditos, 0);
     atualizarResumo(totalCreditos, filtro);
+
+// 👉 Novo cálculo de progresso:
+const concluidos = cursos.filter(c => c.status === 'Concluído')
+                         .reduce((soma, c) => soma + c.creditos, 0);
+const totalPrograma = cursos.reduce((soma, c) => soma + c.creditos, 0);
+const faltam = totalPrograma - concluidos;
+
+// Atualiza o resumo principal
+atualizarResumo(totalCreditos, filtro);
+
+// 👉 Atualiza painel de progresso
+const progresso = document.getElementById('progresso-cursos');
+if (progresso) {
+    progresso.textContent = `Créditos concluídos: ${concluidos} / ${totalPrograma} (faltam ${faltam})`;
+}
+
 }
 
 function montarFiltros() {
@@ -117,6 +136,13 @@ function criarPainelCursos() {
     resumo.className = 'resumo-cursos';
     resumo.setAttribute('aria-live', 'polite');
 
+    const progresso = document.createElement('p');
+progresso.id = 'progresso-cursos';
+progresso.className = 'progresso-cursos';
+progresso.textContent = 'Créditos concluídos: 0 / 0 (faltam 0)';
+secaoCursos.appendChild(progresso);
+
+
     const lista = document.createElement('div');
     lista.id = 'lista-cursos';
     lista.className = 'lista-cursos-container';
@@ -132,3 +158,12 @@ function criarPainelCursos() {
 }
 
 criarPainelCursos();
+function alternarStatus(codigo) {
+    const curso = cursos.find(c => c.codigo === codigo);
+    if (!curso) return;
+
+    curso.status = curso.status === 'Concluído' ? 'Em andamento' : 'Concluído';
+    renderizarCursos();
+}
+
+// Exemplo de uso: alternarStatus('CSE210');
