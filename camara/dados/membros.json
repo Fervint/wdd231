@@ -1,0 +1,60 @@
+{
+  "empresas": [
+    {
+      "nome": "TechWave Solutions",
+      "endereco": "Av. Inovação, 123 - Aparecida de Goiânia",
+      "telefone": "(62) 99999-1234",
+      "site": "https://techwave.com.br",
+      "imagem": "techwave.png",
+      "nivel": 3
+    },
+    {
+      "nome": "SkateZone",
+      "endereco": "Rua Radical, 45 - Goiânia",
+      "telefone": "(62) 98888-4567",
+      "site": "https://skatezone.com",
+      "imagem": "skatezone.png",
+      "nivel": 2
+    },
+    {
+      "nome": "PixelHub",
+      "endereco": "Av. Digital, 200 - Goiânia",
+      "telefone": "(62) 97777-8888",
+      "site": "https://pixelhub.dev",
+      "imagem": "pixelhub.png",
+      "nivel": 1
+    },
+    {
+      "nome": "CyberSuco",
+      "endereco": "Rua Refresh, 50 - Aparecida de Goiânia",
+      "telefone": "(62) 96666-2222",
+      "site": "https://cybersuco.com",
+      "imagem": "cybersuco.png",
+      "nivel": 2
+    },
+    {
+      "nome": "NeonSoft",
+      "endereco": "Av. Neon, 77 - Goiânia",
+      "telefone": "(62) 95555-3333",
+      "site": "https://neonsoft.dev",
+      "imagem": "neonsoft.png",
+      "nivel": 3
+    },
+    {
+      "nome": "DevMotion7",
+      "endereco": "Rua Código, 88 - Aparecida de Goiânia",
+      "telefone": "(62) 94444-4444",
+      "site": "https://devmotion7.io",
+      "imagem": "devmotion7.png",
+      "nivel": 1
+    },
+    {
+      "nome": "Dicria Games",
+      "endereco": "Av. Games, 99 - Goiânia",
+      "telefone": "(62) 93333-5555",
+      "site": "https://dicriagames.com",
+      "imagem": "dicriagames.png",
+      "nivel": 3
+    }
+  ]
+}
