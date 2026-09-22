@@ -1,6 +1,6 @@
 :root {
     --primaria: #0d0d0d;
-    --secundaria: #ff0044;
+    --secundaria: #a90032;
     --terciaria: #00ffff;
     --texto: #f5f5f5;
 }
@@ -31,15 +31,14 @@ nav ul {
 
 /* Links do menu */
 nav a {
-    color: #FFD700;
-    /* dourado */
+    color: #ffffff;
     text-decoration: none;
     font-weight: bold;
 }
 
-/* Mantém dourado mesmo após clicar */
+/* Mantém o contraste após clicar */
 nav a:visited {
-    color: #FFD700;
+    color: #ffffff;
 }
 
 /* Opcional: muda ao passar o mouse */
@@ -52,8 +51,8 @@ nav a:hover {
 .hero {
     text-align: center;
     padding: 3rem 1rem;
-    background: linear-gradient(135deg, var(--secundaria), var(--terciaria));
-    color: var(--primaria);
+    background: linear-gradient(135deg, var(--secundaria), #006b75);
+    color: #ffffff;
 }
 
 .hero-inicial {
@@ -126,12 +125,14 @@ footer {
 #menu-btn {
     font-size: 2rem;
     background: none;
+    color: #ffffff;
     border: none;
     cursor: pointer;
 }
 
 #menu-btn.ativo {
     background-color: var(--terciaria);
+    color: var(--primaria);
 }
 
 /* Layout grade/lista */
