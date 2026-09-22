@@ -18,7 +18,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
 
     <link rel="icon" href="imagens/logo.webp" type="image/webp">
     <link rel="stylesheet" href="estilos/normalize.css">
@@ -26,6 +25,7 @@
     <script src="scripts/menu.js" defer></script>
     <script src="scripts/data.js" defer></script>
     <script src="scripts/clima.js" defer></script>
+    <script src="scripts/destaques.js" defer></script>
 </head>
 
 <body>
@@ -78,7 +78,7 @@
                 <p>Descrição: <span id="descricao"></span></p>
                 <p>Umidade: <span id="umidade"></span>% | Vento: <span id="vento"></span> m/s</p>
                 <figure>
-                    <i id="icone-do-clima" class="bi bi-cloud" role="img" aria-label="Ícone do clima"></i>
+                    <span id="icone-do-clima" class="icone-clima icone-nublado" role="img" aria-label="Ícone do clima">☁</span>
                 </figure>
             </section>
         </div>
@@ -96,8 +96,6 @@
         <p>&copy; <span id="ano"></span> Fabio Ricardo | WDD 231</p>
         <p>Última modificação: <span id="modificacao"></span></p>
     </footer>
-
-<script src="scripts/destaques.js" defer></script>
 
 </body>
 

@@ -25,26 +25,27 @@ function mostrarResultados(dados) {
 
   const icone = document.querySelector('#icone-do-clima');
   const tipo = dados.weather[0].main.toLowerCase();
-  const classesPorTipo = {
-    thunderstorm: 'bi-cloud-lightning-rain',
-    drizzle: 'bi-cloud-drizzle',
-    rain: 'bi-cloud-rain',
-    snow: 'bi-cloud-snow',
-    mist: 'bi-cloud-haze',
-    smoke: 'bi-cloud-haze',
-    haze: 'bi-cloud-haze',
-    dust: 'bi-wind',
-    fog: 'bi-cloud-fog',
-    sand: 'bi-wind',
-    ash: 'bi-cloud-haze',
-    squall: 'bi-wind',
-    tornado: 'bi-tornado',
-    clear: 'bi-sun',
-    clouds: 'bi-cloud'
+  const iconesPorTipo = {
+    thunderstorm: ['icone-tempestade', '⚡'],
+    drizzle: ['icone-garoa', '☂'],
+    rain: ['icone-chuva', '☂'],
+    snow: ['icone-neve', '❄'],
+    mist: ['icone-neblina', '〰'],
+    smoke: ['icone-neblina', '〰'],
+    haze: ['icone-neblina', '〰'],
+    dust: ['icone-vento', '〰'],
+    fog: ['icone-neblina', '〰'],
+    sand: ['icone-vento', '〰'],
+    ash: ['icone-neblina', '〰'],
+    squall: ['icone-vento', '〰'],
+    tornado: ['icone-tornado', '〰'],
+    clear: ['icone-sol', '☀'],
+    clouds: ['icone-nublado', '☁']
   };
 
-  const nomeClasse = classesPorTipo[tipo] || 'bi-cloud';
-  icone.className = `bi ${nomeClasse}`;
+  const [nomeClasse, simbolo] = iconesPorTipo[tipo] || ['icone-nublado', '☁'];
+  icone.className = `icone-clima ${nomeClasse}`;
+  icone.textContent = simbolo;
   icone.setAttribute('aria-label', `Condição do clima: ${dados.weather[0].description}`);
 }
 
