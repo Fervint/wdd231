@@ -1,0 +1,30 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    text-align: center;
+    margin: 0;
+    padding: 2rem;
+}
+
+main {
+    background-color: #fff6da;
+    border: 1px solid #f5df67;
+    border-radius: 10px;
+    display: inline-block;
+    padding: 1rem 2rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    margin-bottom: 1rem;
+}
+
+#temp-atual {
+    font-size: 2rem;
+    color: #537279;
+}
+
+figcaption {
+    text-transform: capitalize;
+    color: #3a5250;
+}
