@@ -23,7 +23,7 @@ fetch('dados/dados/membros.json')
       card.classList.add('card');
       card.dataset.nivel = empresa.nivel;
       card.innerHTML = `
-        <img src="imagens/empresas/${empresa.imagem}" alt="Logo ${empresa.nome}">
+        <img src="imagens/empresas/${empresa.imagem}" alt="Logo ${empresa.nome}" loading="lazy" decoding="async">
         <h3>${empresa.nome}</h3>
         <p><strong>Nível:</strong> ${nomeNivel[empresa.nivel]}</p>
         <p>${empresa.descricao}</p>

@@ -10,6 +10,7 @@ body {
     background-color: var(--primaria);
     color: var(--texto);
     margin: 0;
+    overflow-x: hidden;
 }
 
 header {
@@ -198,8 +199,10 @@ main img {
     cursor: zoom-in;
 }
 
-main img:active {
+main img.imagem-ampliada {
     transform: scale(2);
+    position: relative;
+    z-index: 5;
     cursor: zoom-out;
 }
 
@@ -282,6 +285,8 @@ main img:active {
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 1rem;
     padding: 1rem;
+    content-visibility: auto;
+    contain-intrinsic-size: 400px;
 }
 
 .cards-destaques .card {
@@ -307,6 +312,33 @@ main img:active {
 }
 
 @media (max-width: 700px) {
+    header {
+        flex-wrap: wrap;
+    }
+
+    #menu {
+        width: 100%;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 0;
+        align-items: stretch;
+    }
+
+    nav li {
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    nav a {
+        display: block;
+        padding: 0.75rem 0;
+    }
+
+    main img.imagem-ampliada {
+        transform: scale(1.7);
+    }
+
     .hero-inicial .hero-texto {
         right: 1rem;
         bottom: 1.5rem;
