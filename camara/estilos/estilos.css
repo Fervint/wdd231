@@ -264,6 +264,9 @@ main img:active {
 
 #clima #icone-do-clima {
     width: 96px;
+    color: var(--terciaria);
+    display: inline-block;
+    font-size: 3rem;
     margin: 0 auto;
     cursor: default;
 }

@@ -22,8 +22,30 @@ function mostrarResultados(dados) {
   document.querySelector('#descricao').textContent = dados.weather[0].description;
   document.querySelector('#umidade').textContent = dados.main.humidity;
   document.querySelector('#vento').textContent = dados.wind.speed;
-  const iconesrc = `https://openweathermap.org/img/wn/${dados.weather[0].icon}@2x.png`;
-  document.querySelector('#icone-do-clima').setAttribute('src', iconesrc);
+
+  const icone = document.querySelector('#icone-do-clima');
+  const tipo = dados.weather[0].main.toLowerCase();
+  const classesPorTipo = {
+    thunderstorm: 'bi-cloud-lightning-rain',
+    drizzle: 'bi-cloud-drizzle',
+    rain: 'bi-cloud-rain',
+    snow: 'bi-cloud-snow',
+    mist: 'bi-cloud-haze',
+    smoke: 'bi-cloud-haze',
+    haze: 'bi-cloud-haze',
+    dust: 'bi-wind',
+    fog: 'bi-cloud-fog',
+    sand: 'bi-wind',
+    ash: 'bi-cloud-haze',
+    squall: 'bi-wind',
+    tornado: 'bi-tornado',
+    clear: 'bi-sun',
+    clouds: 'bi-cloud'
+  };
+
+  const nomeClasse = classesPorTipo[tipo] || 'bi-cloud';
+  icone.className = `bi ${nomeClasse}`;
+  icone.setAttribute('aria-label', `Condição do clima: ${dados.weather[0].description}`);
 }
 
 apiFetch();
