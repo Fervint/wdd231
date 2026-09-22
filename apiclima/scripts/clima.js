@@ -28,7 +28,6 @@ async function apiFetch() {
     }
   } catch (erro) {
     console.log('Erro ao buscar dados: ' + erro);
-    status.textContent = 'Não foi possível carregar os dados do clima.';
   }
 }
 

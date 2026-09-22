@@ -1,4 +1,4 @@
-const url = 'dados/membros.json';
+const url = 'dados/dados/membros.json';
 const container = document.querySelector('#membros');
 const botaoGrade = document.querySelector('#grade');
 const botaoLista = document.querySelector('#lista');

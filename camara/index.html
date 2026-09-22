@@ -7,7 +7,6 @@
     <meta name="description" content="Câmara Dicria - Conectando tecnologia, negócios e diversão.">
     <meta name="author" content="Fabio Ricardo">
 
-    <!-- Metadados Open Graph -->
     <meta property="og:title" content="Câmara Dicria - Inovação e Comunidade">
     <meta property="og:description" content="Explore o ecossistema tecnológico e empresarial da Câmara Dicria.">
     <meta property="og:image" content="https://fervint.github.io/wdd231/camara/imagens/logo.webp">
@@ -15,18 +14,17 @@
     <meta property="og:type" content="website">
 
     <title>Câmara Dicria | Início</title>
-    <!-- Preconnect para otimizar -->
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    
-    <!-- Importar a fonte -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
     <link rel="icon" href="imagens/logo.webp" type="image/webp">
     <link rel="stylesheet" href="estilos/normalize.css">
-    <link rel="stylesheet" href="estilos/estilos.css"> 
+    <link rel="stylesheet" href="estilos/estilos.css">
     <script src="scripts/menu.js" defer></script>
     <script src="scripts/data.js" defer></script>
+    <script src="scripts/clima.js" defer></script>
 </head>
 
 <body>
@@ -43,21 +41,61 @@
                 <li><a href="contato.html">Contato</a></li>
             </ul>
         </nav>
-
     </header>
 
     <main>
-        <section class="hero">
-            <h2>Bem-vindo à Câmara Dicria</h2>
-            <p>O ponto de encontro entre tecnologia, negócios e diversão.</p>
-            <a href="diretorio.html" class="botao">Explorar Diretório</a>
+        <section class="hero hero-inicial">
+            <img src="imagens/hero-principal.webp" alt="Cidade digital futurista representando a Câmara Dicria">
+            <div class="hero-texto">
+                <h2>Bem-vindo à Câmara Dicria</h2>
+                <p>O ponto de encontro entre tecnologia, negócios e diversão.</p>
+                <a href="associe-se.html" class="botao">Associe-se agora</a>
+            </div>
         </section>
+
+
+        <div class="informacoes-iniciais">
+            <section class="eventos">
+                <h2>Eventos</h2>
+                <div class="cards-eventos">
+                    <article>
+                        <h3>Workshop de Inovação</h3>
+                        <p>Participe do encontro sobre tecnologia e negócios.</p>
+                        <time datetime="2026-09-30">30 de setembro de 2026</time>
+                    </article>
+                    <article>
+                        <h3>Feira de Startups</h3>
+                        <p>Conheça novas ideias e empreendedores locais.</p>
+                        <time datetime="2026-10-15">15 de outubro de 2026</time>
+                    </article>
+                </div>
+            </section>
+
+            <section id="clima">
+                <h2>Clima Atual em Aparecida de Goiânia</h2>
+                <p>Temperatura: <span id="temp-atual"></span></p>
+                <p>Descrição: <span id="descricao"></span></p>
+                <p>Umidade: <span id="umidade"></span>% | Vento: <span id="vento"></span> m/s</p>
+                <figure>
+                    <img id="icone-do-clima" src="" alt="">
+                </figure>
+            </section>
+        </div>
+
+
+        <section id="destaques">
+            <h2>Empresas em Destaque</h2>
+            <div class="cards-destaques"></div>
+        </section>
+
     </main>
 
     <footer>
         <p>&copy; <span id="ano"></span> Fabio Ricardo | WDD 231</p>
         <p>Última modificação: <span id="modificacao"></span></p>
     </footer>
+    <script src="scripts/destaques.js" defer></script>
+
 </body>
 
 </html>

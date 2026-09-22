@@ -56,6 +56,40 @@ nav a:hover {
     color: var(--primaria);
 }
 
+.hero-inicial {
+    position: relative;
+    padding: 2rem 1rem;
+    overflow: hidden;
+}
+
+.hero-inicial > img {
+    width: min(900px, 100%);
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.hero-inicial .hero-texto {
+    position: absolute;
+    right: max(1rem, calc((100% - 900px) / 2 + 1rem));
+    bottom: 3rem;
+    left: max(1rem, calc((100% - 900px) / 2 + 1rem));
+    padding: 1rem 1.25rem;
+    text-align: left;
+    background: rgba(13, 13, 13, 0.82);
+    color: var(--texto);
+}
+
+.hero-inicial .hero-texto h2,
+.hero-inicial .hero-texto p {
+    margin: 0 0 0.5rem;
+}
+
+.hero-inicial .hero-texto .botao {
+    display: block;
+    width: max-content;
+    margin-left: auto;
+}
+
 .botao {
     background-color: var(--primaria);
     color: var(--terciaria);
@@ -63,6 +97,15 @@ nav a:hover {
     border-radius: 6px;
     text-decoration: none;
     font-weight: bold;
+    transition: background-color 0.25s ease, color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.botao:hover,
+.botao:focus-visible {
+    background-color: var(--terciaria);
+    color: var(--primaria);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 255, 255, 0.35);
 }
 
 footer {
@@ -157,4 +200,121 @@ main img {
 main img:active {
     transform: scale(2);
     cursor: zoom-out;
+}
+
+.informacoes-iniciais {
+    display: grid;
+    grid-template-columns: minmax(0, 1.2fr) minmax(260px, 0.8fr);
+    gap: 1.5rem;
+    max-width: 1100px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.eventos,
+#clima {
+    min-height: 260px;
+    padding: 1.5rem;
+    background: #171717;
+    border: 1px solid #3d3d3d;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.28);
+}
+
+.eventos h2,
+#clima h2 {
+    margin-top: 0;
+    color: var(--terciaria);
+}
+
+.cards-eventos {
+    display: grid;
+    gap: 1rem;
+}
+
+.cards-eventos article {
+    padding: 1rem;
+    border-left: 4px solid var(--secundaria);
+    background: #222;
+}
+
+.cards-eventos h3,
+.cards-eventos p {
+    margin-top: 0;
+}
+
+.cards-eventos time {
+    color: #ffd700;
+    font-weight: bold;
+}
+
+#clima {
+    border-color: var(--terciaria);
+}
+
+#clima p {
+    margin: 1rem 0;
+}
+
+#clima figure {
+    margin: 1rem 0 0;
+    text-align: center;
+}
+
+#clima #icone-do-clima {
+    width: 96px;
+    margin: 0 auto;
+    cursor: default;
+}
+
+@media (max-width: 700px) {
+    .informacoes-iniciais {
+        grid-template-columns: 1fr;
+    }
+}
+
+.cards-destaques {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.cards-destaques .card {
+    padding: 1rem;
+    background-color: #111;
+    color: var(--texto);
+    border: 2px solid var(--terciaria);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
+}
+
+.cards-destaques .card[data-nivel="2"] {
+    border-color: silver;
+}
+
+.cards-destaques .card[data-nivel="3"] {
+    border-color: gold;
+}
+
+.cards-destaques img {
+    width: 120px;
+    height: auto;
+}
+
+@media (max-width: 700px) {
+    .hero-inicial .hero-texto {
+        right: 1rem;
+        bottom: 1.5rem;
+        left: 1rem;
+        padding: 0.75rem;
+    }
+
+    .hero-inicial .hero-texto h2 {
+        font-size: 1.2rem;
+    }
+
+    .hero-inicial .hero-texto p {
+        font-size: 0.85rem;
+    }
 }
