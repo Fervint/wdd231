@@ -116,7 +116,7 @@ footer {
 
 /* Menu */
 #menu {
-    display: none;
+    display: block;
 }
 
 #menu.aberto {
@@ -124,6 +124,7 @@ footer {
 }
 
 #menu-btn {
+    display: none;
     font-size: 2rem;
     background: none;
     color: #ffffff;
@@ -317,7 +318,12 @@ main img.imagem-ampliada {
     }
 
     #menu {
+        display: none;
         width: 100%;
+    }
+
+    #menu-btn {
+        display: block;
     }
 
     nav ul {
