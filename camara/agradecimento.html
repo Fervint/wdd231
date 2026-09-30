@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="imagens/logo.webp" type="image/webp">
+    <title>Obrigado pela Associação | Câmara Dicria</title>
+    <link rel="stylesheet" href="estilos/normalize.css">
+    <link rel="stylesheet" href="estilos/estilos.css">
+</head>
+
+<body>
+    <header>
+        <h1>Obrigado por se associar!</h1>
+    </header>
+
+    <main class="hero">
+        <h2>Confirmação de Associação</h2>
+        <div id="dados"></div>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="ano"></span> Fabio Ricardo | WDD 231</p>
+        <p>Última modificação: <span id="modificacao"></span></p>
+    </footer>
+
+    <script>
+        // Exibir dados enviados
+        const params = new URLSearchParams(window.location.search);
+        const dadosDiv = document.getElementById('dados');
+        let conteudo = '<ul>';
+        params.forEach((valor, chave) => {
+            conteudo += `<li><strong>${chave}:</strong> ${valor}</li>`;
+        });
+        conteudo += '</ul>';
+        dadosDiv.innerHTML = conteudo;
+
+        // Atualiza ano e modificação
+        document.getElementById('ano').textContent = new Date().getFullYear();
+        document.getElementById('modificacao').textContent = new Date(document.lastModified).toLocaleString('pt-BR');
+    </script>
+</body>
+
+</html>

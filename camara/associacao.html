@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Câmara Dicria - Inovação e Comunidade">
+    <meta property="og:description" content="Explore o ecossistema tecnológico e empresarial da Câmara Dicria.">
+    <meta property="og:image" content="https://fervint.github.io/wdd231/camara/imagens/logo.webp">
+    <meta property="og:url" content="https://fervint.github.io/wdd231/camara/index.html">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="imagens/logo.webp" type="image/webp">
+
+    <title>Associe-se | Câmara Dicria</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilos/normalize.css">
+    <link rel="stylesheet" href="estilos/estilos.css">
+    <script src="scripts/menu.js" defer></script>
+    <script src="scripts/data.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <img src="imagens/logo.webp" alt="Logotipo Câmara Dicria" width="80" height="80" decoding="async">
+        <h1>Câmara Dicria</h1>
+        <button id="menu-btn" aria-label="Abrir menu">☰</button>
+        <nav id="menu">
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="diretorio.html">Diretório</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="associacao.html" class="ativo">Associe-se</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="hero">
+        <h2>Associe-se à Câmara Dicria</h2>
+        <p>Escolha seu nível de associação e faça parte da comunidade tecnológica mais divertida de Aparecida de
+            Goiânia!</p>
+
+        <!-- Formulário -->
+        <form method="get" action="agradecimento.html">
+            <label>Nome:
+                <input type="text" name="nome" title="Digite seu nome completo" autocomplete="given-name" required>
+            </label>
+            <label>Sobrenome:
+                <input type="text" name="sobrenome" title="Digite seu sobrenome" autocomplete="family-name" required>
+            </label>
+            <label>Cargo na organização:
+                <input type="text" name="cargo" title="Cargo na organização" autocomplete="organization-title"
+                    pattern="[A-Za-z\s-]{7,}">
+            </label>
+            <label>E-mail:
+                <input type="email" name="email" title="Digite seu e-mail" autocomplete="email"
+                    placeholder="exemplo@email.com" required>
+            </label>
+            <label>Celular:
+                <input type="tel" name="celular" title="Digite seu número de celular" autocomplete="tel" required>
+            </label>
+            <label>Organização:
+                <input type="text" name="organizacao" title="Nome da empresa ou organização" autocomplete="organization"
+                    required>
+            </label>
+            <label>Descrição da atividade:
+                <textarea name="descricao" title="Descreva brevemente sua atividade ou negócio"></textarea>
+            </label>
+            <label>Nível de associação:
+                <select name="nivel" title="Selecione o nível de associação" required>
+                    <option value="np">Associação Sem Fins Lucrativos</option>
+                    <option value="bronze">Associação Bronze</option>
+                    <option value="silver">Associação Prata</option>
+                    <option value="gold">Associação Ouro</option>
+                </select>
+            </label>
+            <input type="hidden" name="datahora" id="datahora">
+            <button type="submit">Solicitar Associação</button>
+        </form>
+
+        <!-- Cartões de associação -->
+        <section class="cards-destaques">
+            <div class="card" data-nivel="np">
+                <h3>Associação Sem Fins Lucrativos</h3>
+                <p>Ideal para organizações comunitárias e ONGs.</p>
+                <button class="abrir-modal" data-modal="modal-np">Saiba Mais</button>
+            </div>
+            <div class="card" data-nivel="bronze">
+                <h3>Associação Bronze</h3>
+                <p>Para quem quer começar a participar de eventos e treinamentos.</p>
+                <button class="abrir-modal" data-modal="modal-bronze">Saiba Mais</button>
+            </div>
+            <div class="card" data-nivel="silver">
+                <h3>Associação Prata</h3>
+                <p>Destaque em publicações e acesso a treinamentos exclusivos.</p>
+                <button class="abrir-modal" data-modal="modal-prata">Saiba Mais</button>
+            </div>
+            <div class="card" data-nivel="gold">
+                <h3>Associação Ouro</h3>
+                <p>Patrocínios, publicidade e networking premium.</p>
+                <button class="abrir-modal" data-modal="modal-ouro">Saiba Mais</button>
+            </div>
+        </section>
+
+        <!-- Modais -->
+        <div id="modal-np" class="modal">
+            <div class="modal-conteudo">
+                <h3>Associação Sem Fins Lucrativos</h3>
+                <ul>
+                    <li>Recebe uma placa com selo do prefeito.</li>
+                    <li>Participação em um desfile festivo da comunidade.</li>
+                </ul>
+                <p><strong>Custo:</strong> Gratuito</p>
+                <button class="fechar-modal" type="button" aria-label="Fechar detalhes">&times;</button>
+            </div>
+        </div>
+
+        <div id="modal-bronze" class="modal">
+            <div class="modal-conteudo">
+                <h3>Associação Bronze</h3>
+                <ul>
+                    <li>Acesso ao diretório e eventos.</li>
+                    <li>Convites para eventos especiais.</li>
+                </ul>
+                <p><strong>Custo:</strong> $10 por ano</p>
+                <button class="fechar-modal" type="button" aria-label="Fechar detalhes">&times;</button>
+            </div>
+        </div>
+
+        <div id="modal-prata" class="modal">
+            <div class="modal-conteudo">
+                <h3>Associação Prata</h3>
+                <ul>
+                    <li>Todos os benefícios Bronze.</li>
+                    <li>Destaque em publicações e treinamentos.</li>
+                </ul>
+                <p><strong>Custo:</strong> $20 por ano</p>
+                <button class="fechar-modal" type="button" aria-label="Fechar detalhes">&times;</button>
+            </div>
+        </div>
+
+        <div id="modal-ouro" class="modal">
+            <div class="modal-conteudo">
+                <h3>Associação Ouro</h3>
+                <ul>
+                    <li>Todos os benefícios Prata.</li>
+                    <li>Espaço para patrocínios e publicidade.</li>
+                    <li>Networking premium com parceiros.</li>
+                </ul>
+                <p><strong>Custo:</strong> $30 por ano</p>
+                <button class="fechar-modal" type="button" aria-label="Fechar detalhes">&times;</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="ano"></span> Fabio Ricardo | WDD 231</p>
+        <p>Última modificação: <span id="modificacao"></span></p>
+    </footer>
+
+    <script>
+        // Preenche data/hora
+        document.getElementById('datahora').value = new Date().toLocaleString('pt-BR');
+
+        // Controle dos modais
+        const abrirModais = document.querySelectorAll('.abrir-modal');
+        const fecharModais = document.querySelectorAll('.fechar-modal');
+        let botaoAnterior;
+
+        function fecharModal(modal) {
+            modal.classList.remove('ativo');
+            document.body.classList.remove('modal-aberto');
+            botaoAnterior?.focus();
+        }
+
+        abrirModais.forEach(botao => {
+            botao.addEventListener('click', () => {
+                const modal = document.getElementById(botao.dataset.modal);
+                botaoAnterior = botao;
+                modal.classList.add('ativo');
+                document.body.classList.add('modal-aberto');
+                modal.querySelector('.fechar-modal').focus();
+            });
+        });
+
+        fecharModais.forEach(botao => {
+            botao.addEventListener('click', () => {
+                fecharModal(botao.closest('.modal'));
+            });
+        });
+
+        document.querySelectorAll('.modal').forEach(modal => {
+            modal.addEventListener('click', evento => {
+                if (evento.target === modal) fecharModal(modal);
+            });
+        });
+
+        window.addEventListener('keydown', e => {
+            if (e.key === 'Escape') {
+                document.querySelectorAll('.modal.ativo').forEach(fecharModal);
+            }
+        });
+    </script>
+</body>
+
+</html>
