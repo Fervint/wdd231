@@ -5,6 +5,14 @@
     --texto: #f5f5f5;
 }
 
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400 700;
+    font-display: swap;
+    src: url('roboto-latin.woff2') format('woff2');
+}
+
 body {
     font-family: 'Roboto', sans-serif;
     background-color: var(--primaria);
