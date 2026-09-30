@@ -16,3 +16,14 @@ if (menuBtn && menu) {
     }
   });
 }
+
+document.querySelector('main')?.addEventListener('click', evento => {
+  const imagem = evento.target.closest('img');
+  if (!imagem) return;
+
+  document.querySelectorAll('main img.imagem-ampliada').forEach(imagemAberta => {
+    if (imagemAberta !== imagem) imagemAberta.classList.remove('imagem-ampliada');
+  });
+
+  imagem.classList.toggle('imagem-ampliada');
+});
