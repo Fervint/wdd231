@@ -201,9 +201,9 @@ main img {
 }
 
 main img.imagem-ampliada {
-    transform: scale(2);
+    transform: scale(1.5);
     position: relative;
-    z-index: 5;
+    z-index: 10;
     cursor: zoom-out;
 }
 
@@ -610,4 +610,100 @@ main img.imagem-ampliada {
 
 body.modal-aberto {
     overflow: hidden;
+}
+/* Layout principal da página Sobre */
+main.sobre {
+    display: grid;
+    grid-template-areas:
+        "titulo"
+        "descricao"
+        "imagem"
+        "galeria"
+        "mensagem";
+    gap: 1.5rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Áreas nomeadas */
+main.sobre h2 {
+    grid-area: titulo;
+    text-align: center;
+    color: var(--terciaria);
+}
+
+main.sobre > p {
+    grid-area: descricao;
+}
+
+main.sobre > img {
+    grid-area: imagem;
+}
+
+#galeria {
+    grid-area: galeria;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+#mensagem {
+    grid-area: mensagem;
+    text-align: center;
+    font-weight: bold;
+    color: var(--terciaria);
+    background: rgba(0, 0, 0, 0.4);
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+/* Cartões dos locais */
+.card {
+    background-color: #111;
+    border: 2px solid var(--terciaria);
+    border-radius: 10px;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(255, 0, 68, 0.6);
+}
+
+.card img {
+    width: min(300px, 100%);
+    height: 200px;
+    max-width: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+/* Efeito hover nas imagens (somente desktop) */
+@media (min-width: 641px) {
+    #galeria .card:has(img.imagem-ampliada) {
+        position: relative;
+        z-index: 1;
+    }
+
+    .card img:hover:not(.imagem-ampliada) {
+        filter: brightness(1.2) saturate(1.3);
+        transform: translateY(-4px) scale(1.05);
+        transition: all 0.3s ease;
+    }
+}
+
+/* Responsividade */
+@media (max-width: 640px) {
+    main.sobre {
+        grid-template-areas:
+            "titulo"
+            "descricao"
+            "imagem"
+            "mensagem"
+            "galeria";
+    }
 }
