@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 583 506" role="img" aria-labelledby="title desc">
+  <title id="title">Wireframe Desktop — Página Inicial do Curso WDD 231</title>
+  <desc id="desc">Representação do layout desktop de referência, com logotipo e navegação, cards dos projetos, cursos e rodapé social.</desc>
+  <defs>
+    <linearGradient id="bg" x2="0" y2="1">
+      <stop stop-color="#f5f3ef"/>
+      <stop offset="1" stop-color="#efeee9"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#17343a" flood-opacity=".11"/>
+    </filter>
+  </defs>
+  <rect width="583" height="506" fill="url(#bg)"/>
+  <rect width="583" height="7" fill="#222"/>
+
+  <g font-family="Arial, Helvetica, sans-serif" fill="#083d4d">
+    <g transform="translate(99 18)">
+      <path d="M0 11 10 2a3 3 0 0 1 4 0l10 9v11a2 2 0 0 1-2 2h-6v-9a4 4 0 0 0-8 0v9H2a2 2 0 0 1-2-2z" fill="#287db0"/>
+      <path d="M11 25v-9a3 3 0 0 1 6 0v9z" fill="#875b2c"/>
+      <text x="28" y="15" font-size="10" font-weight="700">Fabio Ricardo</text>
+    </g>
+    <g font-size="5.5" font-weight="700">
+      <rect x="153" y="46" width="50" height="16" rx="8" fill="#0b5d7a"/>
+      <text x="160" y="56.5" fill="#fff">Página Inicial</text>
+      <text x="213" y="56.5">Projeto da Câmara</text>
+      <text x="282" y="56.5">Projeto Final</text>
+    </g>
+    <line x1="88" y1="68" x2="389" y2="68" stroke="#e4e2dd"/>
+    <text x="99" y="94" font-size="18" font-weight="700">Página Inicial do Curso</text>
+
+    <g filter="url(#shadow)">
+      <rect x="99" y="107" width="86" height="69" rx="7" fill="#fff" stroke="#d5dde0"/>
+      <rect x="194" y="107" width="87" height="69" rx="7" fill="#fff" stroke="#d5dde0"/>
+      <rect x="290" y="107" width="86" height="69" rx="7" fill="#fff" stroke="#d5dde0"/>
+    </g>
+    <g font-size="7.5" font-weight="700">
+      <text x="107" y="122">Sobre o Curso</text>
+      <text x="202" y="122">Projeto da</text>
+      <text x="202" y="132">Câmara</text>
+      <text x="298" y="122">Projeto Final</text>
+    </g>
+    <g font-size="5.3" fill="#42565d">
+      <text x="107" y="137">Bem-vindo ao portfólio de</text>
+      <text x="107" y="145">atividades do curso WDD</text>
+      <text x="107" y="153">231.</text>
+      <text x="202" y="142">Conheça o projeto</text>
+      <text x="202" y="150">desenvolvido durante a</text>
+      <text x="202" y="158">Semana 02.</text>
+      <text x="298" y="137">Acompanhe o projeto final</text>
+      <text x="298" y="145">desenvolvido ao longo do</text>
+      <text x="298" y="153">curso.</text>
+    </g>
+
+    <g filter="url(#shadow)">
+      <rect x="99" y="194" width="87" height="219" rx="7" fill="#fff" stroke="#d5dde0"/>
+    </g>
+    <g font-size="8" font-weight="700">
+      <text x="106" y="208">Cursos do</text>
+      <text x="106" y="218">Programa</text>
+    </g>
+    <g font-size="5.5" font-weight="700" fill="#fff">
+      <rect x="107" y="227" width="28" height="14" rx="2" fill="#004080"/>
+      <text x="113" y="236.5">Todos</text>
+      <rect x="139" y="227" width="26" height="14" rx="2" fill="#004080"/>
+      <text x="147" y="236.5">WDD</text>
+      <rect x="107" y="245" width="23" height="13" rx="2" fill="#004080"/>
+      <text x="114" y="254">CSE</text>
+    </g>
+    <g font-size="5.6" fill="#42565d">
+      <text x="106" y="276">Créditos concluídos: 8 / 12</text>
+      <text x="106" y="284">(faltam 4)</text>
+      <text x="106" y="295">Total de créditos (todos os</text>
+      <text x="106" y="303">cursos): 12</text>
+    </g>
+    <g font-family="Arial, Helvetica, sans-serif" font-size="5.25" fill="#083d4d">
+      <text x="106" y="315"><tspan font-weight="700">CSE110</tspan> (CSE) - 2 créditos -</text>
+      <text x="106" y="322" font-style="italic">Concluído</text>
+      <text x="106" y="332"><tspan font-weight="700">WDD130</tspan> (WDD) - 2 créditos -</text>
+      <text x="106" y="339" font-style="italic">Concluído</text>
+      <text x="106" y="349"><tspan font-weight="700">WDD131</tspan> (WDD) - 2 créditos -</text>
+      <text x="106" y="356" font-style="italic">Concluído</text>
+      <text x="106" y="366"><tspan font-weight="700">CSE111</tspan> (CSE) - 2 créditos -</text>
+      <text x="106" y="373" font-style="italic">Concluído</text>
+      <text x="106" y="383"><tspan font-weight="700">CSE210</tspan> (CSE) - 2 créditos -</text>
+      <text x="106" y="390" font-style="italic">Em andamento</text>
+      <text x="106" y="400"><tspan font-weight="700">WDD231</tspan> (WDD) - 2 créditos -</text>
+      <text x="106" y="407" font-style="italic">Em andamento</text>
+    </g>
+  </g>
+
+  <line x1="88" y1="430" x2="389" y2="430" stroke="#d4d3ce"/>
+  <g transform="translate(99 438)">
+    <g fill="#fff" stroke="#cfd8da">
+      <circle cx="7" cy="7" r="7"/><circle cx="26" cy="7" r="7"/>
+      <circle cx="45" cy="7" r="7"/><circle cx="64" cy="7" r="7"/>
+    </g>
+    <g font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="700" text-anchor="middle" fill="#111">
+      <text x="7" y="10">●</text><text x="26" y="10">in</text>
+      <text x="45" y="10" fill="#3549a8">f</text><text x="64" y="10" font-size="10">𝕏</text>
+    </g>
+  </g>
+  <g font-family="Arial, Helvetica, sans-serif" font-size="5.5" fill="#42565d">
+    <text x="199" y="446">© 2026 Fabio Ricardo</text>
+    <text x="282" y="446">Última modificação: 03/10/2026, 05:02</text>
+  </g>
+</svg>
