@@ -4,13 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- Metadados Open Graph -->
-    <meta property="og:title" content="Câmara Dicria - Inovação e Comunidade">
-    <meta property="og:description" content="Explore o ecossistema tecnológico e empresarial da Câmara Dicria.">
+    <meta name="description"
+        content="Conheça a Câmara Dicria em Aparecida de Goiânia: um espaço que conecta tecnologia, negócios, inovação e comunidade.">
+    <meta property="og:title" content="Sobre a Câmara Dicria | Tecnologia, negócios e inovação">
+    <meta property="og:description"
+        content="Conheça a Câmara Dicria em Aparecida de Goiânia: um espaço que conecta tecnologia, negócios, inovação e comunidade.">
     <meta property="og:image" content="https://fervint.github.io/wdd231/camara/imagens/logo.webp">
     <meta property="og:url" content="https://fervint.github.io/wdd231/camara/sobre.html">
     <meta property="og:type" content="website">
-    <title>Sobre | Câmara Dicria</title>
+    <meta property="og:image:alt" content="Identidade visual da Câmara Dicria">
+    <title>Sobre a Câmara Dicria | Tecnologia, negócios e inovação</title>
     <!-- Preconnect para otimizar -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,10 +30,11 @@
 
 <body>
     <header>
-        <img src="imagens/logo.webp" alt="Logotipo Câmara Dicria" width="80" height="80" decoding="async">
+        <img src="imagens/logo.webp" alt="Logotipo Câmara Dicria" width="80" height="80" loading="lazy"
+            decoding="async">
         <h1>Câmara Dicria</h1>
-        <button id="menu-btn" aria-label="Abrir menu">☰</button>
-        <nav id="menu">
+        <button id="menu-btn" type="button" aria-label="Abrir menu" aria-controls="menu" aria-expanded="false">☰</button>
+        <nav id="menu" aria-label="Navegação principal">
             <ul>
                 <li><a href="index.html">Início</a></li>
                 <li><a href="diretorio.html">Diretório</a></li>
@@ -46,10 +50,11 @@
         <h2>Sobre a Câmara Dicria</h2>
         <p>A Câmara Dicria nasceu para unir tecnologia, negócios e diversão. Nosso foco é apoiar empreendedores,
             desenvolvedores e gamers locais, promovendo inovação e comunidade.</p>
-        <img src="imagens/sobre.webp" alt="Tecnologia e inovação" width="300" loading="lazy" decoding="async">
+        <img src="imagens/sobre.webp" alt="Arte da Câmara Dicria que representa tecnologia, negócios e diversão"
+            width="823" height="823" loading="lazy" decoding="async">
 
-        <section id="galeria"></section>
-        <div id="mensagem"></div>
+        <section id="galeria" aria-label="Locais da Câmara Dicria"></section>
+        <div id="mensagem" aria-live="polite"></div>
     </main>
 
 
@@ -75,7 +80,9 @@
             card.className = "card";
             titulo.textContent = local.nome;
             imagem.src = local.imagem;
-            imagem.alt = local.nome;
+            imagem.alt = "Imagem ilustrativa da Câmara Dicria";
+            imagem.width = 300;
+            imagem.height = 200;
             imagem.loading = "lazy";
             imagem.decoding = "async";
             endereco.textContent = local.endereco;
@@ -83,10 +90,18 @@
             botao.type = "button";
             botao.className = "botao";
             botao.textContent = "Saiba mais";
+            botao.setAttribute("aria-label", `Saiba mais sobre ${local.nome}`);
 
             figura.append(imagem, endereco);
             card.append(titulo, figura, descricao, botao);
             galeria.appendChild(card);
+        });
+
+        document.querySelectorAll("main img").forEach((imagem) => {
+            imagem.tabIndex = 0;
+            imagem.setAttribute("role", "button");
+            imagem.setAttribute("aria-expanded", "false");
+            imagem.setAttribute("aria-label", `Ampliar imagem: ${imagem.alt}`);
         });
 
         const ultimaVisita = Number(localStorage.getItem("ultimaVisita"));

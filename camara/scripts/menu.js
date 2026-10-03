@@ -22,8 +22,26 @@ document.querySelector('main')?.addEventListener('click', evento => {
   if (!imagem) return;
 
   document.querySelectorAll('main img.imagem-ampliada').forEach(imagemAberta => {
-    if (imagemAberta !== imagem) imagemAberta.classList.remove('imagem-ampliada');
+    if (imagemAberta === imagem) return;
+
+    imagemAberta.classList.remove('imagem-ampliada');
+    if (imagemAberta.getAttribute('role') === 'button') {
+      imagemAberta.setAttribute('aria-expanded', 'false');
+      imagemAberta.setAttribute('aria-label', `Ampliar imagem: ${imagemAberta.alt}`);
+    }
   });
 
-  imagem.classList.toggle('imagem-ampliada');
+  const ampliada = imagem.classList.toggle('imagem-ampliada');
+  if (imagem.getAttribute('role') === 'button') {
+    imagem.setAttribute('aria-expanded', String(ampliada));
+    imagem.setAttribute('aria-label', `${ampliada ? 'Reduzir' : 'Ampliar'} imagem: ${imagem.alt}`);
+  }
+});
+
+document.querySelector('main')?.addEventListener('keydown', evento => {
+  const imagem = evento.target.closest('img[role="button"]');
+  if (!imagem || (evento.key !== 'Enter' && evento.key !== ' ')) return;
+
+  evento.preventDefault();
+  imagem.click();
 });
