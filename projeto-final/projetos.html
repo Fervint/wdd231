@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Explore 15 conceitos de jogos e experiências digitais que inspiram Fabio Ricardo a aprender programação e design.">
+    <meta name="author" content="Fabio Ricardo">
+    <meta property="og:title" content="Ideias de projetos | FR Criatt Design">
+    <meta property="og:description" content="Conceitos autorais para explorar jogos, skate, música e tecnologia.">
+    <meta property="og:image" content="https://fervint.github.io/wdd231/projeto-final/imagens/imagem-perfil.webp">
+    <meta property="og:url" content="https://fervint.github.io/wdd231/projeto-final/projetos.html">
+    <meta property="og:type" content="website">
+    <meta property="og:image:alt" content="Foto de perfil de Fabio Ricardo">
+    <meta property="og:locale" content="pt_BR">
+    <meta name="theme-color" content="#1e1e1e">
+    <title>Ideias de projetos | FR Criatt Design</title>
+    <link rel="icon" href="imagens/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Open+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/estilos.css">
+    <script type="module" src="js/projetos.js"></script>
+</head>
+
+<body>
+    <a class="pular-conteudo" href="#conteudo">Pular para o conteúdo</a>
+    <header class="cabecalho">
+        <a class="marca" href="index.html" aria-label="FR Criatt Design, página inicial">
+            <span class="marca-simbolo" aria-hidden="true">FR</span>
+            <span>FR <strong>Criatt</strong><small>DESIGN DIGITAL</small></span>
+        </a>
+        <button class="menu-botao" type="button" aria-label="Abrir menu" aria-controls="navegacao-principal"
+            aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+        <nav id="navegacao-principal" class="navegacao-principal" aria-label="Navegação principal">
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="projetos.html" aria-current="page">Ideias de projetos</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="conteudo" class="secao-limite pagina-projetos">
+        <header class="cabecalho-pagina">
+            <p class="sobrelinha">LABORATÓRIO DE IDEIAS</p>
+            <h1>Conceitos para <span>tirar do papel.</span></h1>
+            <p>Estas são ideias de estudo, não projetos concluídos. Cada conceito me ajuda a praticar programação,
+                interfaces e criatividade em temas que gosto.</p>
+        </header>
+
+        <section class="ferramentas-projetos" aria-label="Buscar e filtrar ideias">
+            <label class="campo-busca" for="busca-projetos">
+                <span>Buscar</span>
+                <input id="busca-projetos" type="search" placeholder="Nome, tema ou tecnologia"
+                    autocomplete="off">
+            </label>
+            <label class="campo-filtro" for="filtro-categoria">
+                <span>Categoria</span>
+                <select id="filtro-categoria">
+                    <option value="todas">Todas</option>
+                </select>
+            </label>
+            <button id="filtro-salvos" class="botao botao-contorno" type="button" aria-pressed="false">
+                Ver salvos <span id="total-salvos">0</span>
+            </button>
+        </section>
+
+        <p id="estado-projetos" class="estado-projetos" role="status" aria-live="polite">Carregando ideias...</p>
+        <section id="lista-projetos" class="grade-projetos" aria-label="Conceitos de projetos"></section>
+    </main>
+
+    <dialog id="modal-projeto" class="modal-projeto" aria-labelledby="modal-titulo">
+        <form method="dialog">
+            <button class="modal-fechar" aria-label="Fechar detalhes">×</button>
+        </form>
+        <p class="sobrelinha">DETALHES DO CONCEITO</p>
+        <h2 id="modal-titulo"></h2>
+        <dl id="modal-dados" class="modal-dados"></dl>
+        <p id="modal-descricao"></p>
+    </dialog>
+
+    <footer class="rodape">
+        <div class="secao-limite rodape-conteudo">
+            <a class="marca marca-rodape" href="index.html">
+                <span class="marca-simbolo" aria-hidden="true">FR</span>
+                <span>FR <strong>Criatt</strong><small>DESIGN DIGITAL</small></span>
+            </a>
+            <p>&copy; <span data-ano></span> Fabio Ricardo. Conceitos de estudo autorais.</p>
+            <p class="video-pendente">Vídeo de demonstração: o link será incluído após a publicação do vídeo.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,124 @@
+{
+  "projetos": [
+    {
+      "id": "game-skate-ruas",
+      "titulo": "Skate pelas ruas",
+      "categoria": "Games",
+      "ferramentas": "JavaScript, Canvas, CSS",
+      "etapa": "Ideia de estudo",
+      "descricao": "Conceito de jogo 2D em que o jogador percorre uma cidade, aprende manobras e coleta itens sem perder o ritmo."
+    },
+    {
+      "id": "game-skatepark",
+      "titulo": "Desafio no skatepark",
+      "categoria": "Games",
+      "ferramentas": "JavaScript, Canvas, física 2D",
+      "etapa": "Ideia de estudo",
+      "descricao": "Pequeno jogo de pontuação para praticar controles, colisões e combinações de manobras em uma pista."
+    },
+    {
+      "id": "game-plataforma",
+      "titulo": "Plataforma pixel",
+      "categoria": "Games",
+      "ferramentas": "JavaScript, Canvas, sprites",
+      "etapa": "Ideia de estudo",
+      "descricao": "Protótipo de plataforma 2D com fases curtas, obstáculos e itens colecionáveis."
+    },
+    {
+      "id": "game-arcade",
+      "titulo": "Arcade de bolso",
+      "categoria": "Games",
+      "ferramentas": "HTML, CSS, JavaScript",
+      "etapa": "Ideia de estudo",
+      "descricao": "Coleção de minijogos rápidos para navegador, com controles acessíveis e recordes salvos localmente."
+    },
+    {
+      "id": "game-puzzle",
+      "titulo": "Quebra-cabeça de circuitos",
+      "categoria": "Games",
+      "ferramentas": "JavaScript, SVG, lógica",
+      "etapa": "Ideia de estudo",
+      "descricao": "Jogo de lógica em que peças precisam ser giradas para completar circuitos e acender o cenário."
+    },
+    {
+      "id": "game-ritmo",
+      "titulo": "Ritmo de garagem",
+      "categoria": "Games",
+      "ferramentas": "JavaScript, Web Audio API",
+      "etapa": "Ideia de estudo",
+      "descricao": "Experimento musical de ritmo para estudar sincronização de áudio, teclado e feedback visual."
+    },
+    {
+      "id": "game-aventura",
+      "titulo": "Aventura cooperativa",
+      "categoria": "Games",
+      "ferramentas": "JavaScript, DOM, módulos ES",
+      "etapa": "Ideia de estudo",
+      "descricao": "Aventura narrativa com escolhas, inventário e finais diferentes definidos pelas decisões do jogador."
+    },
+    {
+      "id": "game-memoria",
+      "titulo": "Memória gamer",
+      "categoria": "Games",
+      "ferramentas": "HTML, CSS Grid, JavaScript",
+      "etapa": "Ideia de estudo",
+      "descricao": "Jogo da memória com níveis de dificuldade, contagem de tentativas e preferência de tema salva."
+    },
+    {
+      "id": "game-defesa",
+      "titulo": "Defesa da cidade",
+      "categoria": "Games",
+      "ferramentas": "JavaScript, Canvas, arrays",
+      "etapa": "Ideia de estudo",
+      "descricao": "Conceito de estratégia em tempo real para praticar estados de jogo, ondas de inimigos e pontuação."
+    },
+    {
+      "id": "web-diario",
+      "titulo": "Diário de ideias",
+      "categoria": "Web",
+      "ferramentas": "HTML, CSS, localStorage",
+      "etapa": "Ideia de estudo",
+      "descricao": "Aplicação pessoal para registrar inspirações, organizar anotações e marcar ideias favoritas."
+    },
+    {
+      "id": "web-portifolio",
+      "titulo": "Galeria de estudos",
+      "categoria": "Web",
+      "ferramentas": "JavaScript, JSON, Fetch API",
+      "etapa": "Ideia de estudo",
+      "descricao": "Catálogo responsivo para explorar estudos criativos por categoria, texto de busca e detalhes em modal."
+    },
+    {
+      "id": "web-musica",
+      "titulo": "Mapa de sons",
+      "categoria": "Web",
+      "ferramentas": "HTML, CSS, JavaScript",
+      "etapa": "Ideia de estudo",
+      "descricao": "Página interativa para organizar referências musicais por estilo, humor e momento de escuta."
+    },
+    {
+      "id": "web-skate",
+      "titulo": "Guia de skate",
+      "categoria": "Web",
+      "ferramentas": "JSON, Fetch API, CSS Grid",
+      "etapa": "Ideia de estudo",
+      "descricao": "Guia comunitário com locais, dicas para iniciantes e informações para cuidar do equipamento."
+    },
+    {
+      "id": "web-eventos",
+      "titulo": "Agenda de encontros",
+      "categoria": "Web",
+      "ferramentas": "JavaScript, módulos ES, datas",
+      "etapa": "Ideia de estudo",
+      "descricao": "Agenda visual para organizar encontros de games, sessões de skate e atividades criativas."
+    },
+    {
+      "id": "web-acessibilidade",
+      "titulo": "Interface para todos",
+      "categoria": "Web",
+      "ferramentas": "HTML semântico, CSS, acessibilidade",
+      "etapa": "Ideia de estudo",
+      "descricao": "Estudo de interface responsiva com navegação por teclado, foco visível, contraste e movimento reduzido."
+    }
+  ]
+}

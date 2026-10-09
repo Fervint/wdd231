@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Revise os dados enviados pelo formulário de contato de Fabio Ricardo.">
+    <meta name="author" content="Fabio Ricardo">
+    <meta name="robots" content="noindex, nofollow">
+    <meta property="og:title" content="Mensagem enviada | FR Criatt Design">
+    <meta property="og:description" content="Resumo dos dados enviados pelo formulário de contato.">
+    <meta property="og:image" content="https://fervint.github.io/wdd231/projeto-final/imagens/imagem-perfil.webp">
+    <meta property="og:url" content="https://fervint.github.io/wdd231/projeto-final/enviado.html">
+    <meta property="og:type" content="website">
+    <meta property="og:image:alt" content="Foto de perfil de Fabio Ricardo">
+    <meta property="og:locale" content="pt_BR">
+    <meta name="theme-color" content="#1e1e1e">
+    <title>Mensagem enviada | FR Criatt Design</title>
+    <link rel="icon" href="imagens/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Open+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/estilos.css">
+    <script type="module" src="js/enviado.js"></script>
+</head>
+
+<body>
+    <a class="pular-conteudo" href="#conteudo">Pular para o conteúdo</a>
+    <header class="cabecalho">
+        <a class="marca" href="index.html" aria-label="FR Criatt Design, página inicial">
+            <span class="marca-simbolo" aria-hidden="true">FR</span>
+            <span>FR <strong>Criatt</strong><small>DESIGN DIGITAL</small></span>
+        </a>
+        <button class="menu-botao" type="button" aria-label="Abrir menu" aria-controls="navegacao-principal"
+            aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+        <nav id="navegacao-principal" class="navegacao-principal" aria-label="Navegação principal">
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="projetos.html">Ideias de projetos</a></li>
+                <li><a href="contato.html" aria-current="page">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="conteudo" class="secao-limite pagina-enviado">
+        <section class="resumo-envio" aria-labelledby="titulo-envio">
+            <p class="sobrelinha">FORMULÁRIO DE CONTATO</p>
+            <h1 id="titulo-envio">Confira sua mensagem</h1>
+            <p id="estado-envio" role="status" aria-live="polite">Carregando os dados enviados...</p>
+            <dl id="dados-envio" class="dados-envio"></dl>
+            <a class="botao botao-destaque" href="contato.html">Voltar ao formulário</a>
+        </section>
+    </main>
+
+    <footer class="rodape">
+        <div class="secao-limite rodape-conteudo">
+            <a class="marca marca-rodape" href="index.html">
+                <span class="marca-simbolo" aria-hidden="true">FR</span>
+                <span>FR <strong>Criatt</strong><small>DESIGN DIGITAL</small></span>
+            </a>
+            <p>&copy; <span data-ano></span> Fabio Ricardo.</p>
+            <p class="video-pendente">Vídeo de demonstração: o link será incluído após a publicação do vídeo.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

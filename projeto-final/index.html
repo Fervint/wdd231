@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Conheça Fabio Ricardo: desenvolvedor em formação, apaixonado por skate, games, música e programação de jogos.">
+    <meta name="author" content="Fabio Ricardo">
+    <meta property="og:title" content="FR Criatt Design | Sobre Fabio Ricardo">
+    <meta property="og:description"
+        content="Um portfólio pessoal sobre tecnologia, jogos, skate e criatividade digital.">
+    <meta property="og:image" content="https://fervint.github.io/wdd231/projeto-final/imagens/imagem-perfil.webp">
+    <meta property="og:url" content="https://fervint.github.io/wdd231/projeto-final/">
+    <meta property="og:type" content="website">
+    <meta property="og:image:alt" content="Foto de perfil de Fabio Ricardo">
+    <meta property="og:locale" content="pt_BR">
+    <meta name="theme-color" content="#1e1e1e">
+    <title>Sobre | FR Criatt Design</title>
+    <link rel="icon" href="imagens/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Open+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/estilos.css">
+    <script type="module" src="js/inicio.js"></script>
+</head>
+
+<body>
+    <a class="pular-conteudo" href="#conteudo">Pular para o conteúdo</a>
+    <header class="cabecalho">
+        <a class="marca" href="index.html" aria-label="FR Criatt Design, página inicial">
+            <span class="marca-simbolo" aria-hidden="true">FR</span>
+            <span>FR <strong>Criatt</strong><small>DESIGN DIGITAL</small></span>
+        </a>
+        <button class="menu-botao" type="button" aria-label="Abrir menu" aria-controls="navegacao-principal"
+            aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+        <nav id="navegacao-principal" class="navegacao-principal" aria-label="Navegação principal">
+            <ul>
+                <li><a href="index.html" aria-current="page">Início</a></li>
+                <li><a href="projetos.html">Ideias de projetos</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="conteudo">
+        <section class="apresentacao secao-limite" aria-labelledby="titulo-apresentacao">
+            <div class="apresentacao-texto">
+                <p class="sobrelinha">TECNOLOGIA · CRIATIVIDADE · MOVIMENTO</p>
+                <h1 id="titulo-apresentacao">Olá, eu sou <span>Fabio Ricardo.</span></h1>
+                <p class="resumo">Tenho 28 anos e estou construindo meu caminho no desenvolvimento web e na criação de
+                    jogos. Gosto de skate, games e música — interesses que alimentam minha curiosidade e vontade de
+                    criar.</p>
+                <p id="saudacao-visita" class="mensagem-visita" role="status" aria-live="polite"></p>
+                <div class="acoes">
+                    <a class="botao botao-destaque" href="projetos.html">Explorar ideias</a>
+                    <a class="botao botao-contorno" href="contato.html">Fale comigo</a>
+                </div>
+            </div>
+            <figure class="foto-perfil">
+                <button class="foto-zoom" type="button" aria-label="Ampliar foto de Fabio Ricardo">
+                    <img src="imagens/imagem-perfil.webp" alt="Foto de perfil de Fabio Ricardo" width="640"
+                        height="640" fetchpriority="high">
+                </button>
+                <figcaption>Fabio Ricardo <span>Desenvolvedor em formação</span></figcaption>
+            </figure>
+        </section>
+
+        <section class="secao-limite sobre-mim" aria-labelledby="titulo-sobre">
+            <div class="titulo-secao">
+                <p class="sobrelinha">UM POUCO SOBRE MIM</p>
+                <h2 id="titulo-sobre">Aprender, experimentar, criar.</h2>
+            </div>
+            <div class="sobre-conteudo">
+                <p>Sou estudante de desenvolvimento web e quero transformar ideias em experiências digitais claras,
+                    úteis e divertidas. Tenho interesse especial por programação de jogos e pelas possibilidades
+                    criativas que a tecnologia oferece.</p>
+                <p>Fora do código, skate, games e música fazem parte do que me inspira. Este site reúne minha
+                    apresentação e conceitos de projetos que quero explorar enquanto continuo aprendendo.</p>
+            </div>
+            <ul class="interesses" aria-label="Interesses">
+                <li>🛹 Skate</li>
+                <li>🎮 Games</li>
+                <li>🎵 Música</li>
+                <li>💻 Programação de jogos</li>
+            </ul>
+        </section>
+
+        <section class="faixa-convite">
+            <div class="secao-limite faixa-convite-conteudo">
+                <div>
+                    <p class="sobrelinha">PRÓXIMA PARADA</p>
+                    <h2>Ideias que podem virar projetos.</h2>
+                    <p>Veja conceitos de jogos e experiências digitais que quero desenvolver.</p>
+                </div>
+                <a class="botao botao-destaque" href="projetos.html">Ver conceitos</a>
+            </div>
+        </section>
+    </main>
+
+    <dialog class="modal-foto" id="modal-foto" aria-labelledby="titulo-modal-foto">
+        <div class="modal-foto-cabecalho">
+            <h2 id="titulo-modal-foto">Fabio Ricardo</h2>
+            <form method="dialog">
+                <button class="modal-fechar" type="submit" aria-label="Fechar foto ampliada">×</button>
+            </form>
+        </div>
+        <img src="imagens/imagem-perfil.webp" alt="Foto de perfil ampliada de Fabio Ricardo" width="640" height="640">
+    </dialog>
+
+    <footer class="rodape">
+        <div class="secao-limite rodape-conteudo">
+            <a class="marca marca-rodape" href="index.html">
+                <span class="marca-simbolo" aria-hidden="true">FR</span>
+                <span>FR <strong>Criatt</strong><small>DESIGN DIGITAL</small></span>
+            </a>
+            <p>&copy; <span data-ano></span> Fabio Ricardo. Conteúdo e foto: arquivo pessoal.</p>
+            <p class="video-pendente">Vídeo de demonstração: o link será incluído após a publicação do vídeo.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
