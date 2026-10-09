@@ -4,22 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- Metadados Open Graph -->
-        <meta property="og:title" content="Câmara Dicria - Inovação e Comunidade">
-        <meta property="og:description" content="Explore o ecossistema tecnológico e empresarial da Câmara Dicria.">
-        <meta property="og:image" content="https://fervint.github.io/wdd231/camara/imagens/logo.webp">
-        <meta property="og:url" content="https://fervint.github.io/wdd231/camara/index.html">
-        <meta property="og:type" content="website">
-    <!-- Preconnect para otimizar -->
+    <meta name="description"
+        content="Planejamento do site Câmara Dicria: finalidade, público, cenários, identidade visual, mapa e wireframes.">
+    <meta name="author" content="Fabio Ricardo">
+    <meta property="og:title" content="Câmara Dicria | Planejamento do Site">
+    <meta property="og:description"
+        content="Conheça o planejamento, a identidade visual e a estrutura do site Câmara Dicria.">
+    <meta property="og:image" content="https://fervint.github.io/wdd231/camara/imagens/logo.webp">
+    <meta property="og:url" content="https://fervint.github.io/wdd231/camara/planejamento.html">
+    <meta property="og:type" content="website">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    
-    <!-- Importar a fonte -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-
     <link rel="icon" href="imagens/logo.webp" type="image/webp">
-    <title>Planejamento do Site | Câmara Dicria</title>
-    
+    <title>Câmara Dicria | Planejamento do Site</title>
     <link rel="stylesheet" href="estilos/normalize.css">
     <link rel="stylesheet" href="estilos/estilos.css">
     <script src="scripts/menu.js" defer></script>
@@ -28,38 +26,84 @@
 
 <body>
     <header>
-        <img src="imagens/logo.webp" alt="Logo Câmara Dicria" width="80" height="80" decoding="async">
-        <h1>Planejamento do Site - Câmara Dicria</h1>
+        <img src="imagens/logo.webp" alt="Logotipo da Câmara Dicria" width="80" height="80" decoding="async">
+        <h1>Planejamento do Site</h1>
     </header>
 
-    <main>
-        <section>
+    <main class="planejamento">
+        <section id="nome-site">
+            <h2>Nome do Site</h2>
+            <p><strong>Câmara Dicria</strong> — tecnologia, negócios e diversão em Aparecida de Goiânia.</p>
+        </section>
+
+        <section id="finalidade">
             <h2>🎯 Finalidade do Site</h2>
             <p>O site da Câmara Dicria conecta tecnologia, negócios e diversão. Ele serve como um centro de recursos
                 para empreendedores locais, gamers e desenvolvedores, promovendo networking e inovação.</p>
         </section>
 
-        <section>
+        <section id="publico-alvo">
             <h2>👥 Público-Alvo</h2>
             <ul>
                 <li>Empreendedores e startups tecnológicas</li>
                 <li>Desenvolvedores e programadores</li>
-                <li>Skatistas e gamers da comunidade local</li>
+                <li>Gamers e participantes da comunidade local</li>
             </ul>
         </section>
 
-        <section>
-            <h2>🎨 Esquema de Cores e Tipografia</h2>
-            <ul>
-                <li>Cor Primária: #0d0d0d</li>
-                <li>Cor Secundária: #ff0044</li>
-                <li>Cor Terciária: #00ffff</li>
-                <li>Cor de Fundo: #111</li>
-                <li>Fonte: Roboto, sans-serif</li>
+        <section id="cenarios">
+            <h2>🔎 Cenários de Uso</h2>
+            <article>
+                <h3>Empreendedora em busca de parceiros</h3>
+                <p><strong>Pergunta:</strong> Como posso encontrar empresas locais de tecnologia e conhecer os
+                    benefícios de me associar?</p>
+                <p><strong>Resposta:</strong> O Diretório apresenta os membros, seus contatos e níveis de associação;
+                    a página Associe-se explica como participar.</p>
+            </article>
+            <article>
+                <h3>Desenvolvedor procurando espaços e eventos</h3>
+                <p><strong>Pergunta:</strong> Onde encontro eventos, espaços para desenvolver protótipos e informações
+                    para entrar em contato com a Câmara?</p>
+                <p><strong>Resposta:</strong> A página inicial destaca eventos, a página Sobre apresenta os locais e a
+                    página Contato oferece os canais de atendimento.</p>
+            </article>
+        </section>
+
+        <section id="identidade-visual">
+            <h2>🎨 Esquema de Cores e Uso no Site</h2>
+            <p>A paleta neon sobre fundo escuro reforça a identidade tecnológica e mantém contraste para leitura.</p>
+            <ul class="paleta-cores">
+                <li>
+                    <span class="amostra-cor cor-primaria" aria-hidden="true"></span>
+                    <span><strong>Primária — #0d0d0d:</strong> fundo principal das páginas.</span>
+                </li>
+                <li>
+                    <span class="amostra-cor cor-secundaria" aria-hidden="true"></span>
+                    <span><strong>Secundária — #a90032:</strong> cabeçalho, rodapé e identidade institucional.</span>
+                </li>
+                <li>
+                    <span class="amostra-cor cor-terciaria" aria-hidden="true"></span>
+                    <span><strong>Terciária — #00ffff:</strong> títulos, bordas, links e estados de foco.</span>
+                </li>
+                <li>
+                    <span class="amostra-cor cor-texto" aria-hidden="true"></span>
+                    <span><strong>Texto — #f5f5f5:</strong> textos e conteúdo sobre superfícies escuras.</span>
+                </li>
+                <li>
+                    <span class="amostra-cor cor-superficie" aria-hidden="true"></span>
+                    <span><strong>Superfície — #111111:</strong> cartões e áreas de conteúdo destacadas.</span>
+                </li>
             </ul>
         </section>
 
-        <section>
+        <section id="tipografia">
+            <h2>🔤 Tipografia Nomeada e Usada</h2>
+            <p><strong>Família:</strong> Roboto, sans-serif, carregada do Google Fonts e aplicada ao corpo do site.</p>
+            <p><strong>Pesos:</strong> 400 para textos corridos e 700 para títulos, navegação e chamadas de ação.</p>
+            <p class="exemplo-tipografia">Exemplo de título em Roboto 700 e texto de leitura em Roboto 400.</p>
+        </section>
+
+        <section id="mapa-site">
             <h2>🗺️ Mapa do Site</h2>
             <ul>
                 <li>Início</li>
@@ -70,14 +114,26 @@
             </ul>
         </section>
 
-        <section>
+        <section id="wireframes">
             <h2>📐 Wireframes</h2>
-            <p>Versões de referência para o layout do site:</p>
-            <img src="imagens/wariframe-desktop1.webp.webp" alt="Wireframe versão desktop da Câmara Dicria" width="600" loading="lazy" decoding="async">
-            <img src="imagens/wariframe-mobile1.webp.webp" alt="Wireframe versão mobile da Câmara Dicria" width="300" loading="lazy" decoding="async">
+            <p>Referências do layout da página inicial para dispositivos móveis e telas maiores:</p>
+            <figure class="wireframe-desktop">
+                <img src="imagens/wariframe-desktop1.webp.webp"
+                    alt="Wireframe da página inicial da Câmara Dicria em tela desktop" width="480" height="706"
+                    loading="lazy" decoding="async" tabindex="0" role="button" aria-expanded="false"
+                    aria-label="Ampliar wireframe para desktop">
+                <figcaption>Wireframe para desktop.</figcaption>
+            </figure>
+            <figure class="wireframe-mobile">
+                <img src="imagens/wariframe-mobile1.webp.webp"
+                    alt="Wireframe da página inicial da Câmara Dicria em tela de celular" width="464" height="659"
+                    loading="lazy" decoding="async" tabindex="0" role="button" aria-expanded="false"
+                    aria-label="Ampliar wireframe para dispositivos móveis">
+                <figcaption>Wireframe para dispositivos móveis.</figcaption>
+            </figure>
         </section>
 
-        <section>
+        <section id="funcionalidades">
             <h2>⚙️ Funcionalidades</h2>
             <ul>
                 <li>Alternância entre grade e lista no diretório</li>
@@ -92,8 +148,6 @@
     <footer>
         <p>&copy; <span id="ano"></span> Fabio Ricardo | WDD 231</p>
         <p>Última modificação: <span id="modificacao"></span></p>
-        <script src="js/data.js"></script>
     </footer>
 </body>
-
 </html>
