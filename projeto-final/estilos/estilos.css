@@ -693,6 +693,28 @@ h2 {
     font-size: 1.08rem;
 }
 
+.contato-foto {
+    width: min(100%, 220px);
+    margin: 1.5rem 0;
+    padding: 0.45rem;
+    border: 1px solid var(--dourado);
+    border-radius: 0.8rem;
+    background: var(--superficie);
+}
+
+.contato-foto img {
+    width: 100%;
+    aspect-ratio: 1;
+    border-radius: 0.45rem;
+    object-fit: cover;
+}
+
+.contato-foto figcaption {
+    padding: 0.55rem 0.15rem 0.1rem;
+    color: var(--texto-suave);
+    font-size: 0.8rem;
+}
+
 .cartao-contato {
     margin-top: 2rem;
     padding: 1.3rem;
@@ -767,128 +789,4 @@ h2 {
 
 .resumo-envio h1 {
     color: var(--dourado);
-}
-
-@media (max-width: 760px) {
-    .cabecalho {
-        flex-wrap: wrap;
-        gap: 0.5rem;
-        padding: 0.8rem 1rem;
-    }
-
-    .menu-botao {
-        display: flex;
-    }
-
-    .navegacao-principal {
-        display: none;
-        flex-basis: 100%;
-    }
-
-    .navegacao-principal.aberto {
-        display: block;
-    }
-
-    .navegacao-principal ul {
-        flex-direction: column;
-        align-items: stretch;
-        gap: 0.15rem;
-        padding: 0.5rem 0 0.2rem;
-    }
-
-    .navegacao-principal a {
-        border-radius: 0.4rem;
-    }
-
-    .apresentacao {
-        min-height: 0;
-        grid-template-columns: minmax(0, 1fr) minmax(180px, 0.7fr);
-        gap: 1.5rem;
-        padding-block: 3rem;
-    }
-
-    .sobre-mim {
-        grid-template-columns: 1fr;
-        gap: 1rem;
-        padding-block: 2rem 3.5rem;
-    }
-
-    .interesses {
-        grid-column: auto;
-    }
-
-    .grade-projetos {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    .pagina-contato {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-        padding-block: 3rem;
-    }
-}
-
-@media (max-width: 540px) {
-    .secao-limite {
-        width: min(100% - 2rem, var(--largura));
-    }
-
-    .apresentacao {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-        padding-block: 2.7rem;
-    }
-
-    .foto-perfil {
-        width: min(78%, 310px);
-        justify-self: center;
-    }
-
-    .faixa-convite-conteudo {
-        align-items: flex-start;
-        flex-direction: column;
-        gap: 1.2rem;
-        padding-block: 2.5rem;
-    }
-
-    .rodape-conteudo {
-        align-items: flex-start;
-        flex-direction: column;
-        gap: 0.8rem;
-    }
-
-    .video-pendente {
-        width: 100%;
-    }
-
-    .cabecalho-pagina {
-        padding-block: 3rem 1.5rem;
-    }
-
-    .ferramentas-projetos {
-        grid-template-columns: 1fr;
-    }
-
-    .grade-projetos {
-        grid-template-columns: 1fr;
-    }
-
-    .projeto-acoes {
-        width: 100%;
-    }
-
-    .modal-projeto {
-        padding: 1.4rem;
-    }
-}
-
-@media (prefers-reduced-motion: reduce) {
-    *,
-    *::before,
-    *::after {
-        scroll-behavior: auto !important;
-        transition-duration: 0.01ms !important;
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-    }
 }
